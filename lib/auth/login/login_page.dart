@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nakama_laundry/auth/forgot_password/forgot_password_selection_page.dart';
 import 'package:nakama_laundry/auth/register/register_page.dart';
 
 class LoginPage extends StatelessWidget {
@@ -69,7 +70,11 @@ class LoginPage extends StatelessWidget {
                 children: [
                   TextButton(
                     onPressed: () {
-                      // Navigasi ke halaman lupa password
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  ForgotPasswordSelectionPage()));
                     },
                     child: Text(
                       'Lupa Password?',
